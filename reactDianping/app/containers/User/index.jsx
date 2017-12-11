@@ -1,5 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import Header from '../../components/Header'
 
 class User extends React.Component {
     constructor(props, context) {
@@ -9,6 +10,7 @@ class User extends React.Component {
     render() {
         return (
             <div>
+                <Header title="用户中心"/>
                 <h1>User</h1>
             </div>
         )
