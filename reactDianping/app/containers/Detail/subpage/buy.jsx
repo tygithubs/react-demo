@@ -48,7 +48,7 @@ class Buy extends React.Component {
         const userinfo = this.props.userinfo
         if (!userinfo.username) {
             // 跳转到登录页面的时候，要传入目标router，以便登录完了可以自己跳转回来
-            hashHistory.push('/login/' + encodeURIComponent('/detail/' + id))
+            hashHistory.push('/Login/' + encodeURIComponent('/detail/' + id))
             return false
         }
         return true
@@ -64,7 +64,7 @@ class Buy extends React.Component {
         // 此过程为模拟购买，因此可省去复杂的购买过程
 
         // 跳转到用户主页
-        hashHistory.push('/user')
+        hashHistory.push('/User')
     }
     // 收藏事件
     storeHandle() {

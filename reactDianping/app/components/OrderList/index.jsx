@@ -5,20 +5,23 @@ import Item from './Item'
 
 import './style.less'
 
-class List extends React.Component {
+class OrderList extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
+        const data = this.props.data
+        const submitComment = this.props.submitComment
+
         return (
-            <div className="list-container">
-                {this.props.data.map((item, index) => {
-                    return <Item key={index} data={item}/>
+            <div>
+                {data.map((item, index) => {
+                    return <Item key={index} data={item} submitComment={submitComment}/>
                 })}
             </div>
         )
     }
 }
 
-export default List
+export default OrderList

@@ -65,7 +65,7 @@ class Login extends React.Component {
         }
     }
     goUserPage() {
-        hashHistory.push('/user')
+        hashHistory.push('/User')
     }
 }
 
